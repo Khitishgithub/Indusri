@@ -3,12 +3,12 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+      
       <div className="text-center py-8 bg-white">
         <h1 className="text-4xl font-bold text-blue-900">About Us Page</h1>
       </div>
 
-      {/* Hero Section with Background Image */}
+     
       <div
         className="relative h-64 bg-cover bg-center"
         style={{
@@ -32,7 +32,7 @@ const About = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* Our Pledge Section */}
+        
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Pledge</h3>
           <p className="text-gray-700 leading-relaxed">
@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </div>
 
-        {/* About Mukwano Industries Header */}
+        
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-blue-900 mb-2">
             ABOUT MUKWANO INDUSTRIES UGANDA LTD.
@@ -53,7 +53,7 @@ const About = () => {
           <div className="w-16 h-1 bg-orange-500 mx-auto"></div>
         </div>
 
-        {/* Company Description */}
+     
         <div className="mb-12">
           <p className="text-gray-700 leading-relaxed text-justify">
             Mukwano industries Uganda Limited is the leading conglomerate in
@@ -67,7 +67,7 @@ const About = () => {
           </p>
         </div>
 
-        {/* Mission and Vision Section */}
+        
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="bg-blue-900 text-white p-8 rounded-lg">
             <h3 className="text-2xl font-bold mb-4">OUR MISSION</h3>
@@ -85,14 +85,14 @@ const About = () => {
           </div>
         </div>
 
-        {/* Our Legacy Section */}
+        
         <div className="bg-gray-100 p-8 rounded-lg">
           <h3 className="text-3xl font-bold text-center text-blue-900 mb-8">
             OUR LEGACY
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8 items-start">
-            {/* Text Content */}
+           
             <div className="md:col-span-2 space-y-4 text-gray-700 text-sm leading-relaxed">
               <p>
                 The Mukwano Industries Uganda Ltd. began operations in the early
@@ -124,7 +124,7 @@ const About = () => {
               </p>
             </div>
 
-            {/* Profile Image */}
+       
             <div className="flex flex-col items-center">
               <div className="w-48 h-48 bg-gray-300 rounded-lg mb-4 overflow-hidden">
                 <img

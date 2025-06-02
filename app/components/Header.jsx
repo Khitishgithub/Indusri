@@ -51,7 +51,6 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* Animated Hamburger */}
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 z-30 relative"
@@ -74,7 +73,6 @@ const Header = () => {
         </button>
       </header>
 
-      {/* Mobile Menu with animation */}
       <div
         className={`md:hidden z-10 bg-black/80 backdrop-blur-sm absolute top-16 w-full px-6 py-4 space-y-4 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
@@ -125,7 +123,6 @@ const Header = () => {
         </div>
       </main>
 
-      {/* Social Links - Left side for desktop */}
       <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-20 hidden lg:block">
         <div className="flex flex-col items-center">
           <div className="flex flex-col space-y-4 mb-6">
@@ -142,8 +139,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Social Links - Bottom center for mobile */}
-      {/* Social Links - Bottom center for mobile (scrolls with page) */}
       <div className="lg:hidden mt-12 flex justify-center space-x-4">
         {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
           <a
