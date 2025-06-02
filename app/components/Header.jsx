@@ -26,7 +26,7 @@ const Header = () => {
       </video>
       <div className="absolute inset-0 bg-black opacity-60" />
 
-      <header className="relative z-10 flex items-center justify-between px-6 py-4 lg:px-12 lg:py-6">
+      <header className="relative z-20 flex items-center justify-between px-6 py-4 lg:px-12 lg:py-6">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-orange-500 rounded transform rotate-45"></div>
           <span className="text-white text-xl font-bold">industri</span>
@@ -51,32 +51,51 @@ const Header = () => {
           </nav>
         </div>
 
+        {/* Animated Hamburger */}
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex flex-col justify-center items-center space-y-1"
+          className="md:hidden flex flex-col justify-center items-center space-y-1 w-8 h-8 z-30 relative"
         >
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
-          <span className="w-6 h-0.5 bg-white"></span>
+          <span
+            className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
+              isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-full bg-white transition duration-300 ease-in-out ${
+              isMobileMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
+              isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          />
         </button>
       </header>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden z-20 bg-black bg-opacity-90 absolute top-16 w-full px-6 py-4 space-y-4">
-          {["Home", "About", "Pages", "Blog", "Shop", "Contact"].map((item) => (
+      {/* Mobile Menu with animation */}
+      <div
+        className={`md:hidden z-10 bg-black/80 backdrop-blur-sm absolute top-16 w-full px-6 py-4 space-y-4 transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-4 opacity-0 pointer-events-none"
+        }`}
+      >
+        {["Home", "About", "Pages", "Blog", "Shop", "Contact"].map(
+          (item, idx) => (
             <a
               key={item}
               href="#"
-              className={`block text-white hover:text-orange-300 transition-colors ${
+              className={`block text-white hover:text-orange-300 transition-all duration-300 delay-${idx * 75} ${
                 item === "Home" ? "text-orange-400" : ""
               }`}
             >
               {item}
             </a>
-          ))}
-        </div>
-      )}
+          )
+        )}
+      </div>
 
       <main className="relative z-10 flex items-center justify-center min-h-screen px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto">
@@ -106,6 +125,7 @@ const Header = () => {
         </div>
       </main>
 
+      {/* Social Links - Left side for desktop */}
       <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-20 hidden lg:block">
         <div className="flex flex-col items-center">
           <div className="flex flex-col space-y-4 mb-6">
@@ -122,6 +142,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Social Links - Bottom center for mobile */}
       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4 lg:hidden">
         {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
           <a
@@ -134,6 +155,7 @@ const Header = () => {
         ))}
       </div>
 
+      {/* Scroll More Text - Right side for desktop */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 rotate-90 z-20 hidden lg:block">
         <div className="flex items-center space-x-2">
           <p className="text-white text-sm tracking-widest opacity-60">
