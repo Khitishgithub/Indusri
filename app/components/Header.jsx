@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const HomePage = () => {
+const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -39,11 +39,12 @@ const HomePage = () => {
                 <a
                   key={item}
                   href="#"
-                  className={`text-white hover:text-orange-300 transition-colors ${
+                  className={`relative group text-white hover:text-orange-300 transition-colors ${
                     item === "Home" ? "text-orange-400" : ""
                   }`}
                 >
                   {item}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               )
             )}
@@ -145,4 +146,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Header;
