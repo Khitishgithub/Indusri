@@ -87,9 +87,9 @@ const Header = () => {
             <a
               key={item}
               href="#"
-              className={`block text-white hover:text-orange-300 transition-all duration-300 delay-${idx * 75} ${
-                item === "Home" ? "text-orange-400" : ""
-              }`}
+              className={`block text-white hover:text-orange-300 transition-all duration-300 delay-${
+                idx * 75
+              } ${item === "Home" ? "text-orange-400" : ""}`}
             >
               {item}
             </a>
@@ -143,7 +143,8 @@ const Header = () => {
       </div>
 
       {/* Social Links - Bottom center for mobile */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4 lg:hidden">
+      {/* Social Links - Bottom center for mobile (scrolls with page) */}
+      <div className="lg:hidden mt-12 flex justify-center space-x-4">
         {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
           <a
             key={idx}
@@ -158,7 +159,7 @@ const Header = () => {
       {/* Scroll More Text - Right side for desktop */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 rotate-90 z-20 hidden lg:block">
         <div className="flex items-center space-x-2">
-          <p className="text-white text-sm tracking-widest opacity-60">
+          <p className="text-orange-400 text-sm tracking-widest opacity-60">
             SCROLL MORE
           </p>
           <div className="w-10 h-0.5 bg-orange-400 rounded" />
