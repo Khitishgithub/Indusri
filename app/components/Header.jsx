@@ -80,7 +80,7 @@ const Header = () => {
 
       <main className="relative z-10 flex items-center justify-center min-h-screen px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className="text-orange-400 uppercase tracking-wider text-lg mb-4">
+          <p className="text-orange-400 uppercase tracking-wider text-2xl mb-4 ">
             Discount
           </p>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
