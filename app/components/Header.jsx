@@ -151,10 +151,10 @@ const Header = () => {
         ))}
       </div>
 
-      {/* Scroll More Text - Right side for desktop */}
+      
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 rotate-90 z-20 hidden lg:block">
         <div className="flex items-center space-x-2">
-          <p className="text-orange-400 text-sm tracking-widest opacity-60">
+          <p className="text-white text-sm tracking-widest opacity-60">
             SCROLL MORE
           </p>
           <div className="w-10 h-0.5 bg-orange-400 rounded" />
